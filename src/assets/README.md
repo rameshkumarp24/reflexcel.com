@@ -1,0 +1,1 @@
+This folder contains static assets such as images and logos for the Reflexcel website.
