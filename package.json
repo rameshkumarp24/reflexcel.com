@@ -2,7 +2,7 @@
   "name": "reflexcel.com",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://rameshkumarp24.github.io/reflexcel.com/",
+  "homepage": "https://rameshkumarp24.github.io/",
   "description": "Reflexcel - Next Generation Software Company Website",
   "scripts": {
     "start": "react-scripts start",
