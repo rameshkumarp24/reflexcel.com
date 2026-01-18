@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './layout/Header';
@@ -11,6 +11,16 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
 function App() {
+  useEffect(() => {
+    // Check for ?redirect= in the URL and update the address bar
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+    if (redirect) {
+      const newUrl = redirect + window.location.search.replace(/([?&])redirect=[^&]+(&)?/, (m, p1, p2) => p2 ? p1 : '');
+      window.history.replaceState({}, '', newUrl);
+    }
+  }, []);
+
   return (
     <>
       <CssBaseline />
